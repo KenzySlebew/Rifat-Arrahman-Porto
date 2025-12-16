@@ -6,23 +6,23 @@ const projects = [
     nome: "Cinefat",
     descricao:
       "Website for buy movies.",
-    imagem: "/Frierenfoto.jpeg",
+    imagem: "/cinefat.png",
     tags: ["HTML", "CSS", "JS"],
     link: "https://github.com/",
   },
   {
-    nome: "Infokus ",
+    nome: "SPBE (Sistem Pemerintahan Berbasis Elektronik) Website for Kabupaten Banjar ",
     descricao:
       "Design system for indie creators featuring responsive tokens and gentle motion recipes.",
-    imagem: "/Fern.jpeg",
-    tags: ["Laravel", "Tailwind", "JS", "Figma"],
+    imagem: "/spbe.png",
+    tags: ["Laravel", "Bootstrap", "JS"],
     link: "https://dribbble.com/",
   },
   {
     nome: "RLioin",
     descricao:
       "Experimental storefront focused on micro-interactions and real-time conversion telemetry.",
-    imagem: "/Stark.jpeg",
+    imagem: "/rlioin.png",
     tags: ["Flutter", "Figma"],
     link: "https://github.com/",
   },

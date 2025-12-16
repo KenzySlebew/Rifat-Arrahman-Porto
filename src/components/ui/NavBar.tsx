@@ -78,7 +78,7 @@ export default function NavBar() {
         className="absolute left-1/2 -translate-x-1/2 flex flex-row gap-5 px-8 py-2 rounded-full backdrop-blur-xs bg-white/40 shadow-xl font-medium text-white items-center border border-white/50"
       >
         <motion.img
-          src="logo.webp"
+          // src="logo.webp"
           className="h-10 cursor-pointer"
           variants={itemVariants}
         />

@@ -223,11 +223,11 @@ export default function AboutMe() {
 
                   <div className="relative space-y-6">
                     {/* Title */}
-                    <h3 className="text-4xl font-bold text-white">About Me</h3>
+                    <h3 className="text-4xl font-bold text-white">I'm Muhammad Rif'at Arrahman</h3>
 
                     {/* Description */}
                     <p className="text-white/90 leading-relaxed text-lg">
-                      I'm Muhammad Rif'at Arrahman, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I'm committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products.
+                      a front-end developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I'm committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products.
                     </p>
 
                     {/* Download CV Button */}
