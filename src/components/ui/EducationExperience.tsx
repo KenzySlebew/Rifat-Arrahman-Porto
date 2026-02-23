@@ -78,15 +78,14 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
         filter,
       }}
     >
-      <div className="flex gap-6 items-start">
+      <div className="flex gap-4 sm:gap-6 items-start">
         {/* Timeline Line & Dot */}
         <div className="flex flex-col items-center relative">
           <div
-            className={`w-4 h-4 rounded-full border-2 ${
-              isEducation
+            className={`w-4 h-4 rounded-full border-2 ${isEducation
                 ? "bg-amber-50 border-amber-50"
                 : "bg-blue-400 border-blue-400"
-            } z-10`}
+              } z-10`}
           />
           {index < timelineData.length - 1 && (
             <div className="w-0.5 h-full min-h-[120px] bg-gradient-to-b from-white/30 via-white/20 to-transparent mt-2" />
@@ -95,12 +94,11 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
 
         {/* Content Card */}
         <motion.div
-          className={`flex-1 border rounded-3xl p-6 backdrop-blur-md transition-colors ${
-            isEducation
+          className={`flex-1 border rounded-3xl p-6 backdrop-blur-md transition-colors ${isEducation
               ? "border-amber-50/20 bg-amber-50/5"
               : "border-blue-400/20 bg-blue-400/5"
-          }`}
-          whileHover={{ 
+            }`}
+          whileHover={{
             scale: 1.02,
           }}
           transition={{ duration: 0.2 }}
@@ -109,11 +107,10 @@ function TimelineItemComponent({ item, index }: TimelineItemProps) {
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span
-                  className={`text-xs uppercase tracking-widest px-2 py-1 rounded-full ${
-                    isEducation
+                  className={`text-xs uppercase tracking-widest px-2 py-1 rounded-full ${isEducation
                       ? "bg-amber-50/20 text-amber-50"
                       : "bg-blue-400/20 text-blue-400"
-                  }`}
+                    }`}
                 >
                   {item.type}
                 </span>

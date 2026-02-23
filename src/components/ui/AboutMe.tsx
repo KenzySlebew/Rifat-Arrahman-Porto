@@ -185,7 +185,7 @@ export default function AboutMe() {
       className="w-full bg-black text-white py-24 px-6 border-t border-white/5"
     >
       <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-amber-50 text-6xl font-bold text-center flex justify-center gap-2 flex-wrap">
+        <h2 className="text-amber-50 text-4xl sm:text-5xl md:text-6xl font-bold text-center flex justify-center gap-2 flex-wrap">
           {letters.map((letter, i) => (
             <motion.span
               key={`${letter}-${i}`}
@@ -214,16 +214,16 @@ export default function AboutMe() {
           <div className="rounded-[32px] bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/20 overflow-hidden">
             <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-0">
               {/* Left Section - About Me Content */}
-              <div className="p-10 lg:p-12 space-y-8 relative">
+              <div className="p-6 sm:p-8 lg:p-12 space-y-8 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 opacity-40 pointer-events-none" />
 
                 <div className="relative space-y-6">
                   {/* Title */}
-                  <h3 className="text-4xl font-bold text-white">I'm Muhammad Rif'at Arrahman</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">I'm Muhammad Rif'at Arrahman</h3>
 
                   {/* Description */}
                   <p className="text-white/90 leading-relaxed text-lg">
-                  a front-end developer and Information Systems student at Telkom University. I hold certifications as a Junior Web Developer and Junior Mobile Developer. I focus on building fast, intuitive, and polished interfaces, blending user-centered design with clean engineering to create digital products that grow with users and businesses.
+                    a front-end developer and Information Systems student at Telkom University. I hold certifications as a Junior Web Developer and Junior Mobile Developer. I focus on building fast, intuitive, and polished interfaces, blending user-centered design with clean engineering to create digital products that grow with users and businesses.
                   </p>
 
                   {/* Download CV Button */}
@@ -272,7 +272,7 @@ export default function AboutMe() {
 
         {/* Tools & Technologies */}
         <motion.div
-          className="rounded-[32px] bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md border border-white/15 p-10"
+          className="rounded-[32px] bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md border border-white/15 p-6 sm:p-8 lg:p-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

@@ -172,11 +172,11 @@ export default function SecaoProjetos() {
   const letters = "Projects".split("");
 
   return (
-    <section className="bg-black gap-5 justify-center py-24 px-6">
+    <section className="bg-black gap-5 justify-center py-16 px-4 sm:py-24 sm:px-6">
       <div className="text-center mb-10">
         <h2
           id="projects"
-          className="text-amber-50 text-7xl font-bold text-center flex justify-center gap-2"
+          className="text-amber-50 text-4xl sm:text-5xl md:text-7xl font-bold text-center flex justify-center gap-2 flex-wrap"
         >
           {letters.map((letter, i) => (
             <motion.span
@@ -210,7 +210,7 @@ export default function SecaoProjetos() {
       {/* Certifications Section */}
       <div className="mt-20">
         <div className="text-center mb-10">
-          <h3 className="text-amber-50 text-5xl font-bold text-center flex justify-center gap-2 mb-3">
+          <h3 className="text-amber-50 text-3xl sm:text-4xl md:text-5xl font-bold text-center flex justify-center gap-2 flex-wrap mb-3">
             {"Certifications".split("").map((letter, i) => (
               <motion.span
                 key={i}

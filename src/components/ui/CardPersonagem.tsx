@@ -22,7 +22,7 @@ export default function ProjectCard({
 
   return (
     <motion.div
-      className="max-w-xs"
+      className="w-full sm:max-w-xs"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -46,7 +46,7 @@ export default function ProjectCard({
             animate={{ scale: isHovered ? 1.1 : 1 }}
             transition={{ duration: 0.4 }}
           />
-          
+
           {/* Hover Overlay */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent flex flex-col justify-end p-6"
@@ -62,7 +62,7 @@ export default function ProjectCard({
             >
               {descricao}
             </motion.p>
-            
+
             {link && (
               <motion.a
                 href={link}

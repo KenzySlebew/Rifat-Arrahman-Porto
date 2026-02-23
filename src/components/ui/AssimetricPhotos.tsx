@@ -27,22 +27,22 @@ const PhotoRow = ({
 
   // Animação contínua
   useEffect(() => {
-  const interval = setInterval(() => {
-    setPositions((prev) =>
-      prev.map((pos) => {
-        let newPos = direction === "left" ? pos - speed : pos + speed;
-        if (direction === "left" && newPos < -256) newPos = containerWidth;
-        if (direction === "right" && newPos > containerWidth) newPos = -256;
-        return newPos;
-      })
-    );
-  }, 16);
+    const interval = setInterval(() => {
+      setPositions((prev) =>
+        prev.map((pos) => {
+          let newPos = direction === "left" ? pos - speed : pos + speed;
+          if (direction === "left" && newPos < -256) newPos = containerWidth;
+          if (direction === "right" && newPos > containerWidth) newPos = -256;
+          return newPos;
+        })
+      );
+    }, 16);
 
-  return () => clearInterval(interval);
-}, [containerWidth, direction, speed]);
+    return () => clearInterval(interval);
+  }, [containerWidth, direction, speed]);
 
   return (
-    <div ref={containerRef} className="relative w-full h-70 overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-40 sm:h-52 md:h-70 overflow-hidden">
       {images.map((src, i) => (
         <motion.img
           key={i}
@@ -50,14 +50,14 @@ const PhotoRow = ({
           initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
           alt={`Gallery image ${i}`}
           whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-          className="w-60 h-full object-cover rounded-lg shadow-md absolute top-0"
+          className="w-40 sm:w-48 md:w-60 h-full object-cover rounded-lg shadow-md absolute top-0"
           style={{ left: positions[i] }}
           transition={{
             delay: i * 0.1,
             duration: 0.6,
             type: "spring",
           }}
-          viewport={{ once: false, amount: 0.2 }} 
+          viewport={{ once: false, amount: 0.2 }}
         />
       ))}
     </div>

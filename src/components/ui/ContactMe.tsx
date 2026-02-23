@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { User, Mail, MessageSquare, Send, Share2, Loader2, CheckCircle2, XCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { 
-  FaLinkedin, 
-  FaInstagram, 
+import {
+  FaLinkedin,
+  FaInstagram,
   FaGithub
 } from "react-icons/fa";
 
@@ -135,7 +135,7 @@ export default function ContactMe() {
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
       setErrors({});
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitStatus("idle");
@@ -143,7 +143,7 @@ export default function ContactMe() {
     } catch (error) {
       console.error("Error sending email:", error);
       setSubmitStatus("error");
-      
+
       // Reset error message after 5 seconds
       setTimeout(() => {
         setSubmitStatus("idle");
@@ -156,7 +156,7 @@ export default function ContactMe() {
   return (
     <section
       id="contact"
-      className="w-full bg-black py-24 px-6 relative overflow-hidden"
+      className="w-full bg-black py-16 px-4 sm:py-24 sm:px-6 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Header */}
@@ -218,11 +218,10 @@ export default function ContactMe() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className={`w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border backdrop-blur-md text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${
-                  errors.name
+                className={`w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border backdrop-blur-md text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${errors.name
                     ? "border-red-500/50 focus:ring-red-500/50"
                     : "border-white/10 focus:ring-purple-500/50"
-                }`}
+                  }`}
               />
               {errors.name && (
                 <motion.div
@@ -248,11 +247,10 @@ export default function ContactMe() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className={`w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border backdrop-blur-md text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${
-                  errors.email
+                className={`w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border backdrop-blur-md text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${errors.email
                     ? "border-red-500/50 focus:ring-red-500/50"
                     : "border-white/10 focus:ring-purple-500/50"
-                }`}
+                  }`}
               />
               {errors.email && (
                 <motion.div
@@ -278,11 +276,10 @@ export default function ContactMe() {
                 onChange={handleChange}
                 placeholder="Your Message"
                 rows={6}
-                className={`w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border backdrop-blur-md text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all resize-none ${
-                  errors.message
+                className={`w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border backdrop-blur-md text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all resize-none ${errors.message
                     ? "border-red-500/50 focus:ring-red-500/50"
                     : "border-white/10 focus:ring-purple-500/50"
-                }`}
+                  }`}
               />
               {errors.message && (
                 <motion.div

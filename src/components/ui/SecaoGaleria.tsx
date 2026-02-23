@@ -6,8 +6,8 @@ export default function SecaoGaleria() {
 
   return (
     <>
-      <div className="w-full h-screen bg-black flex flex-col text-center pt-25">
-        <h2 id="gallery" className="text-amber-50 text-7xl font-bold">
+      <div className="w-full min-h-screen bg-black flex flex-col text-center pt-16 sm:pt-25">
+        <h2 id="gallery" className="text-amber-50 text-4xl sm:text-5xl md:text-7xl font-bold">
           {letters.map((letter, i) => (
             <motion.span
               key={i}
@@ -28,7 +28,7 @@ export default function SecaoGaleria() {
           ))}
         </h2>
         {/* <p className="text-white font-bold">@geoosama</p> */}
-        <AssimetricPhotos/>
+        <AssimetricPhotos />
       </div>
     </>
   );
