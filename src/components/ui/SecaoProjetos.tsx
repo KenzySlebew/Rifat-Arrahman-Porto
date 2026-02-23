@@ -14,7 +14,7 @@ const projects = [
   {
     nome: "SPBE (Sistem Pemerintahan Berbasis Elektronik) Website for Kabupaten Banjar ",
     descricao:
-      "Design system for indie creators featuring responsive tokens and gentle motion recipes.",
+      "Website for government.",
     imagem: "/spbe.png",
     tags: ["Laravel", "Bootstrap", "JS"],
     link: "https://github.com/KenzySlebew/SPBE",
@@ -22,7 +22,7 @@ const projects = [
   {
     nome: "RLioin",
     descricao:
-      "Experimental storefront focused on micro-interactions and real-time conversion telemetry.",
+      "Portofolio Mobile Websites.",
     imagem: "/rlioin.png",
     tags: ["Flutter", "Figma"],
     link: "https://github.com/KenzySlebew/Rlioin-beta",
