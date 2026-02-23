@@ -173,14 +173,10 @@ export default function AboutMe() {
   const letters = "About Me".split("");
 
   const handleDownloadCV = () => {
-    // Replace with your actual CV file path
-    const cvUrl = "/cv.pdf"; // or your CV file path
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = "Muhammad_Rif'at_Arrahman_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(
+      "https://drive.google.com/file/d/1bzql4LdBxfx1Dx1rB_4KsIVNsxC9sKMG/view?usp=drive_link",
+      "_blank"
+    );
   };
 
   return (
@@ -215,63 +211,63 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-            <div className="rounded-[32px] bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/20 overflow-hidden">
-              <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-0">
-                {/* Left Section - About Me Content */}
-                <div className="p-10 lg:p-12 space-y-8 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 opacity-40 pointer-events-none" />
+          <div className="rounded-[32px] bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/20 overflow-hidden">
+            <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-0">
+              {/* Left Section - About Me Content */}
+              <div className="p-10 lg:p-12 space-y-8 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 opacity-40 pointer-events-none" />
 
-                  <div className="relative space-y-6">
-                    {/* Title */}
-                    <h3 className="text-4xl font-bold text-white">I'm Muhammad Rif'at Arrahman</h3>
+                <div className="relative space-y-6">
+                  {/* Title */}
+                  <h3 className="text-4xl font-bold text-white">I'm Muhammad Rif'at Arrahman</h3>
 
-                    {/* Description */}
-                    <p className="text-white/90 leading-relaxed text-lg">
-                      a front-end developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I'm committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products.
-                    </p>
+                  {/* Description */}
+                  <p className="text-white/90 leading-relaxed text-lg">
+                  a front-end developer and Information Systems student at Telkom University. I hold certifications as a Junior Web Developer and Junior Mobile Developer. I focus on building fast, intuitive, and polished interfaces, blending user-centered design with clean engineering to create digital products that grow with users and businesses.
+                  </p>
 
-                    {/* Download CV Button */}
-                    <motion.button
-                      onClick={handleDownloadCV}
-                      className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl overflow-hidden transition-all hover:from-purple-500 hover:to-pink-500 shadow-lg shadow-purple-500/20"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                      <Download className="w-5 h-5 transition-transform group-hover:translate-y-1" />
-                      <span>Download CV</span>
-                      <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                    </motion.button>
+                  {/* Download CV Button */}
+                  <motion.button
+                    onClick={handleDownloadCV}
+                    className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl overflow-hidden transition-all hover:from-purple-500 hover:to-pink-500 shadow-lg shadow-purple-500/20"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <Download className="w-5 h-5 transition-transform group-hover:translate-y-1" />
+                    <span>Download CV</span>
+                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                  </motion.button>
 
-                    {/* Motto */}
-                    <p className="text-white/60 italic pt-4 border-t border-white/10">
-                      "Working with heart, creating with mind."
-                    </p>
-                  </div>
+                  {/* Motto */}
+                  <p className="text-white/60 italic pt-4 border-t border-white/10">
+                    "Working with heart, creating with mind."
+                  </p>
                 </div>
-
-                {/* Right Section - Lanyard Card */}
-                <motion.div
-                  className="relative bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-transparent border-l border-white/10 lg:border-l lg:border-t-0 border-t p-8 lg:p-6 flex items-center justify-center overflow-visible min-h-[500px]"
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  {/* Lanyard Top Bar */}
-                  <div className="absolute top-4 left-6 right-6 h-px bg-white/20" />
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-px h-12 bg-white/15" />
-
-                  {/* Lanyard Container */}
-                  <div className="relative w-full max-w-sm h-[480px] flex items-start justify-center pt-12">
-                    <Lanyard position={[0, -0.5, 16]} gravity={[0, -40, 0]} fixedPosition={[0, 4.5, 0]} />
-                  </div>
-                </motion.div>
               </div>
+
+              {/* Right Section - Lanyard Card */}
+              <motion.div
+                className="relative bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-transparent border-l border-white/10 lg:border-l lg:border-t-0 border-t p-8 lg:p-6 flex items-center justify-center overflow-visible min-h-[500px]"
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                {/* Lanyard Top Bar */}
+                <div className="absolute top-4 left-6 right-6 h-px bg-white/20" />
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-px h-12 bg-white/15" />
+
+                {/* Lanyard Container */}
+                <div className="relative w-full max-w-sm h-[480px] flex items-start justify-center pt-12">
+                  <Lanyard position={[0, -0.5, 16]} gravity={[0, -40, 0]} fixedPosition={[0, 4.5, 0]} />
+                </div>
+              </motion.div>
             </div>
+          </div>
         </motion.div>
 
         {/* Tools & Technologies */}

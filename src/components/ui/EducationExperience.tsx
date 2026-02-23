@@ -22,9 +22,9 @@ const timelineData: TimelineItem[] = [
   {
     title: "Quality Assurance",
     place: "Teaching Factory",
-    period: "2023 — Present",
+    period: "2024 — 2025",
     description:
-      "Lead hybrid squads to ship interactive experiences that lifted engagement by 35% across campaigns.",
+      "being QA of bentala Website",
     type: "experience",
   },
   {
@@ -40,7 +40,7 @@ const timelineData: TimelineItem[] = [
     place: "Telkom University",
     period: "2025 — Now",
     description:
-      "design system architecture, usability testing, and automated delivery pipelines.",
+      "Undergraduate Student",
     type: "education",
   },
 ];
