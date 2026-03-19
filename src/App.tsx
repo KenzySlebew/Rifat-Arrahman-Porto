@@ -1,6 +1,6 @@
 import NavBar from "./components/ui/NavBar";
 import Banner from "./components/ui/Banner";
-import SecaoGaleria from "./components/ui/SecaoGaleria";
+// import SecaoGaleria from "./components/ui/SecaoGaleria"; // Gallery hidden temporarily
 import SecaoProjetos from "./components/ui/SecaoProjetos";
 import EducationExperience from "./components/ui/EducationExperience";
 import AboutMe from "./components/ui/AboutMe";
@@ -20,7 +20,7 @@ function App() {
           <Banner />
         </div>
         <AboutMe />
-        <SecaoGaleria />
+        {/* <SecaoGaleria /> */} {/* Gallery hidden temporarily */}
         <SecaoProjetos />
         <EducationExperience />
         <ContactMe />

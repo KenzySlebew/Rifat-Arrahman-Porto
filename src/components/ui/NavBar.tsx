@@ -95,7 +95,7 @@ export default function NavBar() {
 
   const navLinks = [
     { href: "#about", label: "About", delay: 3.2 },
-    { href: "#gallery", label: "Gallery", delay: 2.5 },
+    // { href: "#gallery", label: "Gallery", delay: 2.5 }, // Gallery hidden temporarily
     { href: "#projects", label: "Projects", delay: 3 },
     { href: "#experience", label: "Experience", delay: 3.3 },
     { href: "#contact", label: "Contact", delay: 3.5 },
