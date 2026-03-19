@@ -54,7 +54,7 @@ const certifications = [
   {
     nama: "Junior Web Developer (BNSP)",
     gambar:
-      "/junior web certificate.jpeg",
+      "/junior web dev certificate.jpeg",
   },
   {
     nama: "Junior Web Developer",
