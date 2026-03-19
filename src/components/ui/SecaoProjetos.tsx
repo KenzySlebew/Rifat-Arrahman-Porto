@@ -47,19 +47,19 @@ const projects = [
 
 const certifications = [
   {
-    nama: "Junior Mobile Programming",
+    nama: "Junior Mobile Programming (BNSP)",
     gambar:
-      "https://media.licdn.com/dms/image/v2/D562DAQEC6bWxF_m4VA/profile-treasury-image-shrink_1280_1280/B56Zf8TRsGHcAU-/0/1752284602452?e=1772427600&v=beta&t=wRxEgGP0_mXMXfPug62ito593mAEalEIiHwoiorQI5w",
+      "/junior mobile certificate.jpeg",
+  },
+  {
+    nama: "Junior Web Developer (BNSP)",
+    gambar:
+      "/junior web certificate.jpeg",
   },
   {
     nama: "Junior Web Developer",
     gambar:
-      "https://media.licdn.com/dms/image/v2/D562DAQEj_DyuonoW4g/profile-treasury-image-shrink_1280_1280/B56ZxfGDG.HUAQ-/0/1771121951150?e=1772427600&v=beta&t=I4Gy24eI-G7znmF4uJProVFQdeN86Nkuly33CXTZjTE",
-  },
-  {
-    nama: "Junior Web Developer",
-    gambar:
-      "https://media.licdn.com/dms/image/v2/D562DAQFewvp8mCHiug/profile-treasury-image-shrink_800_800/B56ZoU.Gh4HAAc-/0/1761288417115?e=1772427600&v=beta&t=bhYf-2bi2vQ91KqmhiHpfNKIhPH0NgQVJw0iyJy2880",
+      "/JWD certificate.jpeg",
   },
   {
     nama: "Learning Basic AI",
