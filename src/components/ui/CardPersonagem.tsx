@@ -4,10 +4,14 @@ import { useState } from "react";
 interface ProjectCardProps {
   nome: string;
   descricao: string;
+  longDescricao?: string;
   imagem: string;
   tags?: string[];
   cta?: string;
   link?: string;
+  github?: string;
+  status?: "live" | "dev" | "archived";
+  onSeeMore?: () => void;
 }
 
 export default function ProjectCard({
@@ -15,8 +19,8 @@ export default function ProjectCard({
   descricao,
   imagem,
   tags = [],
-  cta = "view case",
   link,
+  onSeeMore,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -55,7 +59,7 @@ export default function ProjectCard({
             transition={{ duration: 0.3 }}
           >
             <motion.p
-              className="text-white text-sm leading-relaxed mb-4"
+              className="text-white text-sm leading-relaxed mb-4 line-clamp-3"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: isHovered ? 0 : 10, opacity: isHovered ? 1 : 0 }}
               transition={{ delay: 0.1 }}
@@ -72,8 +76,9 @@ export default function ProjectCard({
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: isHovered ? 0 : 10, opacity: isHovered ? 1 : 0 }}
                 transition={{ delay: 0.15 }}
+                onClick={(e) => e.stopPropagation()}
               >
-                {cta}
+                view live
                 <motion.span
                   className="inline-block"
                   animate={{ x: isHovered ? 5 : 0 }}
@@ -101,6 +106,37 @@ export default function ProjectCard({
               </span>
             ))}
           </div>
+
+          {/* See More Button */}
+          {onSeeMore && (
+            <motion.button
+              onClick={onSeeMore}
+              className="mt-1 w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium text-white/70 hover:text-white border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-200"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              See More
+            </motion.button>
+          )}
         </div>
       </motion.div>
     </motion.div>

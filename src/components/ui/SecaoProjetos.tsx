@@ -1,65 +1,80 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ProjectCard from "../ui/CardPersonagem";
+import ProjectDetailModal from "../ui/ProjectDetailModal";
 
-const projects = [
+interface Project {
+  nome: string;
+  descricao: string;
+  longDescricao?: string;
+  imagem: string;
+  tags: string[];
+  link?: string;
+  github?: string;
+  status?: "live" | "dev" | "archived";
+}
+
+const projects: Project[] = [
   {
     nome: "Cinefat",
-    descricao:
-      "Website for buy movies.",
+    descricao: "Website for buying movies.",
+    longDescricao:
+      "Cinefat is a movie purchasing platform built with vanilla web technologies. The site features a clean browsing experience for discovering and purchasing movie tickets online, with a responsive layout and intuitive UI designed to streamline the booking flow.",
     imagem: "/cinefat.png",
     tags: ["HTML", "CSS", "JS"],
     link: "https://github.com/",
+    github: "https://github.com/",
+    status: "archived",
   },
   {
-    nome: "SPBE (Sistem Pemerintahan Berbasis Elektronik) Website for Kabupaten Banjar ",
-    descricao:
-      "Website for government.",
+    nome: "SPBE – Sistem Pemerintahan Berbasis Elektronik",
+    descricao: "E-government website for Kabupaten Banjar.",
+    longDescricao:
+      "SPBE (Sistem Pemerintahan Berbasis Elektronik) is an official e-government website developed for Kabupaten Banjar. The platform centralises public services and government information in one place, built with Laravel on the backend and Bootstrap for a responsive front-end experience.",
     imagem: "/spbe.png",
     tags: ["Laravel", "Bootstrap", "JS"],
     link: "https://github.com/KenzySlebew/SPBE",
+    github: "https://github.com/KenzySlebew/SPBE",
+    status: "live",
   },
   {
-    nome: "RLioin",
+    nome: "Smart-Draft",
     descricao:
-      "Portofolio Mobile Websites.",
-    imagem: "/rlioin.png",
-    tags: ["Flutter", "Figma"],
-    link: "https://github.com/KenzySlebew/Rlioin-beta",
-  },
-  {
-    nome: "Figma-to-react for internship test",
-    descricao:
-      "Convert figma to react with reusable components. for internship test",
-    imagem: "/figma-to-react.png",
-    tags: ["React", "Figma", "Builder.io"],
-    link: "https://test-figma-to-react.netlify.app/#",
+      "Smart-Draft is a productivity tool designed to eliminate the hassle of manual document styling.",
+    longDescricao:
+      "Smart-Draft is a productivity tool designed to eliminate the hassle of manual document styling. It automatically formats theses and final projects to meet strict academic standards. With a streamlined upload, scan, and fix workflow, it saves students hours of editing in just a few seconds.",
+    imagem: "/smartdraft.png",
+    tags: ["React", "Javascript"],
+    link: "https://smartdraftv1.netlify.app/",
+    github: "https://github.com/KenzySlebew",
+    status: "live",
   },
   {
     nome: "Pilates Reservation App",
     descricao:
-      "Front-end reservation app for booking Pilates sessions — choose dates, timeslots, and courts with integrated payment.",
+      "Front-end reservation app for booking Pilates sessions with integrated payment.",
+    longDescricao:
+      "A front-end reservation application for booking Pilates sessions. Users can choose dates, timeslots, and courts with an integrated payment flow. Built with Next.js, the app features a modern and clean UI focused on a smooth booking experience for fitness enthusiasts.",
     imagem: "/pilates-reservation.png",
     tags: ["Next.js"],
     link: "https://pilates-reservation.netlify.app/",
+    github: "https://github.com/KenzySlebew",
+    status: "live",
   },
 ];
 
 const certifications = [
   {
     nama: "Junior Mobile Programming (BNSP)",
-    gambar:
-      "/junior mobile certificate.jpeg",
+    gambar: "/junior mobile certificate.jpeg",
   },
   {
     nama: "Junior Web Developer (BNSP)",
-    gambar:
-      "/junior web dev certificate.jpeg",
+    gambar: "/junior web dev certificate.jpeg",
   },
   {
     nama: "Junior Web Developer",
-    gambar:
-      "/JWD certificate.jpeg",
+    gambar: "/JWD certificate.jpeg",
   },
   {
     nama: "Learning Basic AI",
@@ -105,7 +120,6 @@ const CertificationCard = ({ nama, gambar, index }: CertificationCardProps) => {
               animate={{ scale: isHovered ? 1.1 : 1 }}
               transition={{ duration: 0.4 }}
               onError={(e) => {
-                // Fallback jika gambar tidak ditemukan
                 (e.target as HTMLImageElement).src = "/placeholder-cert.jpg";
               }}
             />
@@ -170,6 +184,7 @@ const CertificationCard = ({ nama, gambar, index }: CertificationCardProps) => {
 
 export default function SecaoProjetos() {
   const letters = "Projects".split("");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section className="bg-black gap-5 justify-center py-16 px-4 sm:py-24 sm:px-6">
@@ -203,9 +218,19 @@ export default function SecaoProjetos() {
 
       <div className="flex flex-wrap gap-6 justify-center py-10">
         {projects.map((project) => (
-          <ProjectCard key={project.nome} {...project} />
+          <ProjectCard
+            key={project.nome}
+            {...project}
+            onSeeMore={() => setSelectedProject(project)}
+          />
         ))}
       </div>
+
+      {/* Project Detail Modal */}
+      <ProjectDetailModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
 
       {/* Certifications Section */}
       <div className="mt-20">
@@ -247,4 +272,3 @@ export default function SecaoProjetos() {
     </section>
   );
 }
-
